@@ -12,47 +12,62 @@ var score = 0;
 
 // DECLARE FUNCTIONS
 
-function scoreCheck(x) {
-    if (x === goalNumber) {
-        winCount++;
-        $("#winsDiv").append("Wins: " + winCount);
-    } else if (x > goalNumber) {
-        alert("You lose!");
+    function scoreCheck(x) {
+        if (x === goalNumber) {
+            winCount++;
+            $("#winsDiv").html("Wins: " + winCount);
+            reset();
+        } else if (x > goalNumber) {
+            lossCount++;
+            $("#lossesDiv").html("Losses: " + lossCount);
+            reset();
+        }
     }
-}
 
+    function reset() {
+        // GENERATE RANDOM GOAL NUMBER (BETWEEN 19 AND 120)
+        
+            goalNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        
+            // ADD NUMBER TO HTML DIV
+        
+            $("#goalNumDiv").html(goalNumber);
 
-// GENERATE RANDOM GOAL NUMBER (BETWEEN 19 AND 120)
+            score = 0;
+            $("#scoreDiv").html(score);
 
-    goalNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        // GENERATE RANDOM CRYSTAL NUMBERS
 
-    // ADD NUMBER TO HTML DIV
+            crystNum1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+            console.log("Crystal 1 is: " + crystNum1);
+            $("cryst1").data( "val", crystNum1 );
+            crystNum2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+            console.log("Crystal 2 is: " + crystNum2);
+            $("cryst2").data( "val", crystNum2 );
+            crystNum3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+            console.log("Crystal 3 is: " + crystNum3);
+            $("cryst3").data( "val", crystNum3 );
+            crystNum4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+            console.log("Crystal 4 is: " + crystNum4);
+            $("cryst4").data( "val", crystNum4 );
 
-    $("#goalNumDiv").append(goalNumber);
+        
+    }
 
 // ADD WINS & LOSSES NUMBER TO HTML
 
     $("#winsDiv").append("Wins: " + winCount);
     $("#lossesDiv").append("Losses: " + lossCount);
-    $("#scoreDiv").append(score);
+    
+
+
+reset();
+
 
 
 console.log(goalNumber);
 
-// GENERATE RANDOM CRYSTAL NUMBERS
 
-    crystNum1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      console.log("Crystal 1 is: " + crystNum1);
-      $("cryst1").data( "val", crystNum1 );
-      crystNum2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      console.log("Crystal 2 is: " + crystNum2);
-      $("cryst2").data( "val", crystNum2 );
-      crystNum3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      console.log("Crystal 3 is: " + crystNum3);
-      $("cryst3").data( "val", crystNum3 );
-      crystNum4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      console.log("Crystal 4 is: " + crystNum4);
-      $("cryst4").data( "val", crystNum4 );
     
       
 
@@ -81,9 +96,10 @@ $("#cryst4").on("click", function () {
 
 // IF TOTAL SCORE === GOAL NUMBER, INCREASE WIN COUNTER
 
-if (score === goalNumber) {
-    winCount ++;
-    $("#winsDiv").append("Wins: " + winCount);
-}
+// if (score === goalNumber) {
+//     winCount ++;
+//     $("#winsDiv").html(winCount);
+    
+// }
 
 // IF TOTAL SCORE > GOAL NUMBER RESET GAME, INCREASE LOSS COUNTER
