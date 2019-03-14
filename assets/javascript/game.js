@@ -12,6 +12,15 @@ var score = 0;
 
 // DECLARE FUNCTIONS
 
+function scoreCheck(x) {
+    if (x === goalNumber) {
+        winCount++;
+        $("#winsDiv").append("Wins: " + winCount);
+    } else if (x > goalNumber) {
+        alert("You lose!");
+    }
+}
+
 
 // GENERATE RANDOM GOAL NUMBER (BETWEEN 19 AND 120)
 
@@ -34,21 +43,47 @@ console.log(goalNumber);
 
     crystNum1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       console.log("Crystal 1 is: " + crystNum1);
-    crystNum2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("cryst1").data( "val", crystNum1 );
+      crystNum2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       console.log("Crystal 2 is: " + crystNum2);
-    crystNum3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("cryst2").data( "val", crystNum2 );
+      crystNum3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       console.log("Crystal 3 is: " + crystNum3);
-    crystNum4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+      $("cryst3").data( "val", crystNum3 );
+      crystNum4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       console.log("Crystal 4 is: " + crystNum4);
+      $("cryst4").data( "val", crystNum4 );
     
       
 
 // WHEN CRYSTALS ARE CLICKED POINTS ARE ADDED TO THE TOTAL SCORE
 
-$(".image").on("click", function () {
-
+$("#cryst1").on("click", function () {
+    score = score + crystNum1;
+    $("#scoreDiv").text(score);
+    scoreCheck(score);
+});
+$("#cryst2").on("click", function () {
+    score = score + crystNum2;
+    $("#scoreDiv").text(score);
+    scoreCheck(score);
+});
+$("#cryst3").on("click", function () {
+    score = score + crystNum3;
+    $("#scoreDiv").text(score);
+    scoreCheck(score);
+});
+$("#cryst4").on("click", function () {
+    score = score + crystNum4;
+    $("#scoreDiv").text(score);
+    scoreCheck(score);
 });
 
 // IF TOTAL SCORE === GOAL NUMBER, INCREASE WIN COUNTER
+
+if (score === goalNumber) {
+    winCount ++;
+    $("#winsDiv").append("Wins: " + winCount);
+}
 
 // IF TOTAL SCORE > GOAL NUMBER RESET GAME, INCREASE LOSS COUNTER
