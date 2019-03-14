@@ -11,12 +11,6 @@ var crystalNums = [];
 
 // DECLARE FUNCTIONS
 
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
-  }
-
 
 // GENERATE RANDOM GOAL NUMBER (BETWEEN 19 AND 120)
 
@@ -24,6 +18,12 @@ function getRandomIntInclusive(min, max) {
 
     // ADD NUMBER TO HTML DIV
 
+    $("#goalNumDiv").append(goalNumber);
+
+// ADD WINS & LOSSES NUMBER TO HTML
+
+    $("#winsDiv").append("Wins: " + winCount);
+    $("#lossesDiv").append("Losses: " + lossCount);
 
 console.log(goalNumber);
 
