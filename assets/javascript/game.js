@@ -8,6 +8,7 @@ var crystNum4 = '';
 var winCount = 0;
 var lossCount = 0;
 var crystalNums = [];
+var score = 0;
 
 // DECLARE FUNCTIONS
 
@@ -24,6 +25,8 @@ var crystalNums = [];
 
     $("#winsDiv").append("Wins: " + winCount);
     $("#lossesDiv").append("Losses: " + lossCount);
+    $("#scoreDiv").append(score);
+
 
 console.log(goalNumber);
 
@@ -41,6 +44,10 @@ console.log(goalNumber);
       
 
 // WHEN CRYSTALS ARE CLICKED POINTS ARE ADDED TO THE TOTAL SCORE
+
+$(".image").on("click", function () {
+
+});
 
 // IF TOTAL SCORE === GOAL NUMBER, INCREASE WIN COUNTER
 
