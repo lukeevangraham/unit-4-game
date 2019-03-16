@@ -67,3 +67,8 @@ h1 {
 img {
     margin-top: 10px;
 }
+
+#images {
+    width: 100%;
+    flex-shrink: 5;
+}
