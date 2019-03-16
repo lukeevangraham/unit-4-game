@@ -7,13 +7,16 @@
     width: 200px;
     height: 100px;
     margin-bottom: 10px;
+    color: white;
+    padding: 10px;
 }
 
 #score-board-container {
     background-color: #56F694;
-    width: 300px;
+    width: 400px;
     height: 100px;
     display: flex;
+    align-content: space-between;
 }
 
 #win-loss-container {
@@ -38,6 +41,7 @@ h1 {
     background-color: #0DB794;
     padding: 10px;
     color: white;
+    margin-top: 10px;
 }
 
 .instructions {
@@ -57,8 +61,5 @@ h1 {
     background-color: #2A7748;
     color: white;
     padding: 10px;
-}
-
-.goalNumDiv {
-    padding: 10px;
+    margin-bottom: 50px;
 }
