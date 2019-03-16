@@ -15,8 +15,13 @@
 </head>
 <body>
 
-    <h1>CrystalsCollector!</h1>
-    <div class="instructions">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+
+    <h1 class="rounded">CrystalsCollector!</h1>
+    <div class="instructions rounded">
 
         <p>You will be given a random number at the start of the game.</p>
         <p>There are four crystals velow.  By click on a crystal you will add a sepcific amount of points to your total score.</p>
@@ -25,29 +30,32 @@
         <p>Each time when the game starts, the game will change the values of each crystal.</p>
     </div>
 
-    <div class="container">
+    <div class="inside-container">
         <div id="score-board-container">
         <div id="goalNumDiv" ></div>
-            <div id="win-loss-container" >
-                <div id="winsDiv"></div>
-                <div id="lossesDiv" ></div>
+            <div id="win-loss-container" class="rounded">
+                <div id="winsDiv" class="rounded"></div>
+                <div id="lossesDiv" class="rounded"></div>
             </div>
         </div>
-        <div id="images" >
+        <div id="images">
             <img id="cryst1" class="crystal image" src="assets/images/cryst1.png" alt="first crystal">
             <img id="cryst2" class="crystal image" src="assets/images/cryst2.png" alt="second crystal">
             <img id="cryst3" class="crystal image" src="assets/images/cryst3.jpeg" alt="third crystal">
             <img id="cryst4" class="crystal image" src="assets/images/cryst4.png" alt="fourth crystal">
         </div>
-        <div id="scoreIntro"><p>Your total score is:</p></div>
-        <div id="scoreDiv"></div>
+        <div id="scoreIntro" class="rounded-top"><p>Your total score is:</p></div>
+        <div id="scoreDiv" class="display-4 rounded-bottom" ></div>
     </div>
 
     <script type="text/javascript" ></script>
     
-    
-    
-    
+    <div class="col-lg-3">
+
+    </div>
+</div>
+</div>
+</div>
     
     <script src="assets/javascript/game.js"></script>
 </body>

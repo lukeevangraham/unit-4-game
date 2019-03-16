@@ -3,13 +3,14 @@
 }
 
 #goalNumDiv {
-    background-color: cadetblue;
+    background-color: #78B891;
     width: 200px;
     height: 100px;
+    margin-bottom: 10px;
 }
 
 #score-board-container {
-    background-color: red;
+    background-color: #56F694;
     width: 300px;
     height: 100px;
     display: flex;
@@ -18,4 +19,46 @@
 #win-loss-container {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+}
+
+.winsDiv {
+    margin: 10px;
+}
+
+.lossesDiv {
+    margin: 10px;
+}
+
+body {
+    background-image: url("../images/pipes.png");
+}
+
+h1 {
+    background-color: #0DB794;
+    padding: 10px;
+    color: white;
+}
+
+.instructions {
+    background-color: #A0F6C2;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#scoreIntro {
+    background-color: #2A7748;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#scoreDiv {
+    background-color: #2A7748;
+    color: white;
+    padding: 10px;
+}
+
+.goalNumDiv {
+    padding: 10px;
 }
