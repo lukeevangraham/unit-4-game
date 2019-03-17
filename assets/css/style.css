@@ -1,20 +1,18 @@
 .crystal {
-    width: 24.5%;
+    width: 24%;
 }
 
 #goalNumDiv {
     background-color: #78B891;
-    /* width: 200px; */
+    width: 50%
     height: 100px;
-    margin-bottom: 10px;
     color: white;
-    padding: 10px;
+    padding: 10px 50px 10px 50px;
 }
 
 #score-board-container {
     background-color: #56F694;
-    /* width: 400px; */
-    height: 100px;
+    width: 100%;
     display: flex;
     align-content: space-between;
 }
@@ -23,6 +21,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
+    width: 50%;
 }
 
 .winsDiv {
