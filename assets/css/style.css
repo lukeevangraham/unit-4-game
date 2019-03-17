@@ -4,7 +4,7 @@
 
 #goalNumDiv {
     background-color: #78B891;
-    width: 50%
+    width: 45%
     height: 100px;
     color: white;
     padding: 10px 50px 10px 50px;
@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    width: 50%;
+    width: 45%;
 }
 
 .winsDiv {
