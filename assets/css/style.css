@@ -1,10 +1,10 @@
 .crystal {
-    width: 100px;
+    width: 24.5%;
 }
 
 #goalNumDiv {
     background-color: #78B891;
-    width: 200px;
+    /* width: 200px; */
     height: 100px;
     margin-bottom: 10px;
     color: white;
@@ -13,7 +13,7 @@
 
 #score-board-container {
     background-color: #56F694;
-    width: 400px;
+    /* width: 400px; */
     height: 100px;
     display: flex;
     align-content: space-between;
@@ -66,9 +66,4 @@ h1 {
 
 img {
     margin-top: 10px;
-}
-
-#images {
-    width: 100%;
-    flex-shrink: 5;
 }
